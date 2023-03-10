@@ -1,8 +1,8 @@
-# webpart
+# SPFX Webpart pulling REST API data.
 
 ## Summary
 
-Short summary on functionality and used technologies.
+This is spfx Webpart example for pulling and showing information provided by REST API.
 
 [picture of the solution in action, if possible]
 
