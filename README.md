@@ -4,7 +4,7 @@
 
 This is spfx Webpart example for pulling and showing information provided by REST API.
 
-[picture of the solution in action, if possible]
+![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-data-external-api.png)
 
 ## Used SharePoint Framework Version
 
