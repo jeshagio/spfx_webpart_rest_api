@@ -40,19 +40,19 @@ export default class WebpartWebPart extends BaseClientSideWebPart<IWebpartWebPar
   public render(): void {
    
   let html: string = '';
-  this.context.httpClient.get('https://restcountries.com/v3.1/region/europe', HttpClient.configurations.v1)
+  this.context.httpClient.get('https://www.balldontlie.io/api/v1/teams', HttpClient.configurations.v1)
   .then((res: HttpClientResponse): Promise<any> => {
     return res.json();
   })
   .then((response: any): void => {
     //console.log(response);
     
-    response.forEach((item: any) => {
+    response.data.forEach((item: any) => {
       html += `
       <section class="${styles.webpart} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
           <ul class="${styles.list}">
           <li class="${styles.listItem}">
-            <span class="ms-font-l">${item.capital}</span>
+            <span class="ms-font-l">${item.full_name}</span>
           </li>
         </ul>
       </section>`;
