@@ -53,5 +53,5 @@ This is spfx Webpart example for pulling and showing information provided by ext
 
 ## References
 
-- [More free APIs for testing at ](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
+- [More free APIs for testing at https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 
