@@ -49,7 +49,7 @@ This is spfx Webpart example for pulling and showing information provided by ext
   - **gulp serve**
 - On the initial page you can add the webpart called "Webpart" and see a list of NBA teams (using the REST API at https://www.balldontlie.io/api/v1/teams)
 > If you want to change the url API and show another data just go to src/webparts/webpart/WebpartWebPart.ts, and change the this.context.httpClient.get first parameter, then chek to response.data.forEach((item: any).. , response result will change depending the json returned, and finally check the name of the data you will show: <span class="ms-font-l">${item.full_name}</span> , full_name would change for example by "name"
-![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-data-external-api.png)
+![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-change-url-api.png)
 
 ## References
 
