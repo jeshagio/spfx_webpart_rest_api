@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is spfx Webpart example for pulling and showing information provided by REST API.
+This is spfx Webpart example for pulling and showing information provided by external REST API.
 
 ![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-data-external-api.png)
 
@@ -17,22 +17,18 @@ This is spfx Webpart example for pulling and showing information provided by RES
 
 > Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
 
-## Prerequisites
 
-> Any special pre-requisites?
-
-## Solution
+## Contributors
 
 | Solution    | Author(s)                                               |
 | ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
+| src | Jorge Ruiz Caro Larrea |
 
 ## Version history
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
+| 1.0     | January 27, 2023 | Initial release |
 
 ## Disclaimer
 
@@ -42,32 +38,20 @@ This is spfx Webpart example for pulling and showing information provided by RES
 
 ## Minimal Path to Awesome
 
-- Clone this repository
+- Add a new dir for the solution (with name for example: webpart)
 - Ensure that you are at the solution folder
+- Clone this repository (https://github.com/jeshagio/spfx_webpart_rest_api.git)
 - in the command-line run:
   - **npm install**
+- From code editor (recommended Visual Studio Code), open server.json and replace the initialPage parameter with your Sharepoint Online site:
+![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-change-sharepoint-url.png)
+-  in the command-line run:
   - **gulp serve**
-
-> Include any additional steps as needed.
-
-## Features
-
-Description of the extension that expands upon high-level summary above.
-
-This extension illustrates the following concepts:
-
-- topic 1
-- topic 2
-- topic 3
-
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
-
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+- On the initial page you can add the webpart called "Webpart" and see a list of NBA teams (using the REST API at https://www.balldontlie.io/api/v1/teams)
+> If you want to change the url API and show another data just go to src/webparts/webpart/WebpartWebPart.ts, and change the this.context.httpClient.get first parameter, then chek to response.data.forEach((item: any).. , response result will change depending the json returned, and finally check the name of the data you will show: <span class="ms-font-l">${item.full_name}</span> , full_name would change for example by "name"
+![screenshot](https://github.com/jeshagio/spfx_webpart_rest_api/blob/main/images/webpart-data-external-api.png)
 
 ## References
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+- [More free APIs for testing at ](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
+
